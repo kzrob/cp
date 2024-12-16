@@ -1,2 +1,1 @@
 # usaco
- USACO Practice Problems
