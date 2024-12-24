@@ -6,28 +6,37 @@ int main()
 	// INPUT
 	int N, Q;
 	cin >> N >> Q;
-	// END INPUT
 
-	int array[3][N][N] = {0};
-	// array[0] = xy
-	// array[1] = yz
-	// array[2] = xz
+	int array[3][N][N]{};
 
-	// PRINT ARRAY
-	for (auto &arr : array)
+	// Cheese removal
+	for (int i = 0; i < Q; i++)
 	{
-		for (auto &row : arr)
-		{
-			for (auto &col : row)
-			{
-				cout << col << " ";
-			}
-			cout << "\n";
-		}
-		cout << "\n\n";
-	}
-	// END PRINT ARRAY
+		int x, y, z;
+		cin >> x >> y >> z;
 
-	cout << array[0][1][1];
+		array[0][x][y]++;
+		array[1][y][z]++;
+		array[2][x][z]++;
+
+		// FIND VALUES
+		int count = 0;
+		for (int i = 0; i < 3; i++)
+		{
+			for (auto &row : array[i])
+			{
+				for (auto &col : row)
+				{
+					if (col == N)
+					{
+						count++;
+					}
+				}
+			}
+		}
+
+		cout << count << "\n";
+	}
+
 	return 0;
 }
