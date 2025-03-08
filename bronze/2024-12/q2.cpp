@@ -1,17 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
 	// INPUT
 	int N, Q;
 	cin >> N >> Q;
 
-	int array[3][N][N]{};
+	int array[3][N][N] {};
 
 	// Cheese removal
-	for (int i = 0; i < Q; i++)
-	{
+	while (Q --> 0) {
 		int x, y, z;
 		cin >> x >> y >> z;
 
@@ -21,14 +19,10 @@ int main()
 
 		// FIND VALUES
 		int count = 0;
-		for (int i = 0; i < 3; i++)
-		{
-			for (auto &row : array[i])
-			{
-				for (auto &col : row)
-				{
-					if (col == N)
-					{
+		for (int i = 0; i < 3; i++) {
+			for (auto &row : array[i]) {
+				for (auto &col : row) {
+					if (col == N) {
 						count++;
 					}
 				}
