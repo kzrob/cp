@@ -1,33 +1,39 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
+	//fast io
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	// INPUT
 	int N, Q;
 	cin >> N >> Q;
 
-	int array[3][N][N] {};
+    //i hate this syntax
+	vector<vector<vector<int>>> arr(
+        3, vector<vector<int>>(
+            N, vector<int>(N, N)
+        )
+    );
 
-	// Cheese removal
+    int count = 0;
+
+	//for each removal
 	while (Q --> 0) {
 		int x, y, z;
 		cin >> x >> y >> z;
 
-		array[0][x][y]++;
-		array[1][y][z]++;
-		array[2][x][z]++;
-
-		// FIND VALUES
-		int count = 0;
-		for (int i = 0; i < 3; i++) {
-			for (auto &row : array[i]) {
-				for (auto &col : row) {
-					if (col == N) {
-						count++;
-					}
-				}
-			}
-		}
+        //remove cheese blocks
+		if (--arr[0][x][y] == 0) {
+            count++;
+        }
+		if (--arr[1][y][z] == 0) {
+            count++;
+        }
+		if (--arr[2][x][z] == 0) {
+            count++;
+        }
 
 		cout << count << "\n";
 	}
