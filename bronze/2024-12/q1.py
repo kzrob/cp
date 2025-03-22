@@ -10,7 +10,7 @@ print = sys.stdout.write
 
 # execution
 T = int(input())
-for i in range(T):
+for _ in range(T):
 	n = int(input())
 	power = math.ceil(math.log10(n))
 	
