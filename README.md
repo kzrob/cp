@@ -1,2 +1,4 @@
-# USACO
-[usaco.org](https://usaco.org/index.php)
+# Competitive Programming
+USACO  
+Codeforces  
+Advent of code
