@@ -2,31 +2,31 @@
 using namespace std;
 
 int main() {
-	//fast io
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
+    //fast io
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-	//test cases
-	int T;
-	cin >> T;
+    //test cases
+    int T;
+    cin >> T;
 
-	while (T--) {
-		int N;
-		cin >> N;
+    while (T--) {
+        int N;
+        cin >> N;
 
-		vector<string> cows(N);
-		vector<string> sorted(N);
+        vector<string> cows(N);
+        vector<string> sorted(N);
 
-		for (int i = 0; i < N; i++) {
-			cin >> cows[i];
-			cin >> sorted[i];
-		}
+        for (int i = 0; i < N; i++) {
+            cin >> cows[i];
+            cin >> sorted[i];
+        }
 
-		sort(sorted.begin(), sorted.end(), greater<string>());
-		
+        sort(sorted.begin(), sorted.end(), greater<string>());
+        
 
 
-	}
+    }
 
-	return 0;
+    return 0;
 }

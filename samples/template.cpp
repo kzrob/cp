@@ -2,21 +2,20 @@
 using namespace std;
 
 int solve() {
-	return 0;
+    return 0;
 }
 
 int main() {
-	//fast io
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
+    //fast io
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-	//constraints
-	int T; cin >> T;
+    //constraints
+    int T; cin >> T;
 
-	while (T--) {
-		int ans = solve();
-		cout << ans << "\n";
-	}
+    while (T--) {
+        cout << solve() << "\n";
+    }
 
-	return 0;
+    return 0;
 }

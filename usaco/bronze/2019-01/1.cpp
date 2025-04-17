@@ -13,7 +13,7 @@ int main() {
     cin.tie(nullptr);
 
     freopen("shell.in", "r", stdin);
-	freopen("shell.out", "w", stdout);
+    freopen("shell.out", "w", stdout);
 
     int cups[3] = {0, 1, 2};
     int count[3] {};

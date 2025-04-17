@@ -2,12 +2,12 @@
 using namespace std;
 
 int main() {
-	//fast io
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
+    //fast io
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-	//test cases
-	int T;
+    //test cases
+    int T;
     cin >> T;
 
     while (T--) {
@@ -32,5 +32,5 @@ int main() {
         cout << output << "\n";
     }
 
-	return 0;
+    return 0;
 }

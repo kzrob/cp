@@ -4,20 +4,20 @@ using namespace std;
 typedef long long big;
 
 int main() {
-	//fast io
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
+    //fast io
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-	//test cases
-	big N, Q;
-	cin >> N >> Q;
+    //test cases
+    big N, Q;
+    cin >> N >> Q;
 
-	string s;
-	cin >> s;
-	
-	while (Q--) {
-		big l, r;
-		cin >> l >> r;
+    string s;
+    cin >> s;
+    
+    while (Q--) {
+        big l, r;
+        cin >> l >> r;
         l--; r--; //remove one index
         
         //cout << l << " " << r << ": " << s.substr(l, r-l+1) << "\n";
@@ -25,10 +25,10 @@ int main() {
         big i = l;
         big j = r;
         big minLenI = 0;
-		while (s[i] == s[j]) {
-			i++;
+        while (s[i] == s[j]) {
+            i++;
             minLenI++;
-		}
+        }
 
         big minLenJ = 0;
         i=l;
@@ -53,43 +53,43 @@ int main() {
             r -= minLenJ;
         }
 
-		big pivot = -1;
+        big pivot = -1;
 
-		while (pivot < 0 && r-l+1 >= 3) {
-			big m = r-1;
-			big minDist = N;
+        while (pivot < 0 && r-l+1 >= 3) {
+            big m = r-1;
+            big minDist = N;
 
-			while (m > l) {
+            while (m > l) {
                 //cout << "(" << l << ", " << r << ") | "
                 //<< pivot << " | "
                 //<< minDist << " | "
                 //<< m << ": " << s[m] << " " << s[r] << "\n";
-				if (s[m] == s[r]) {
-					big diff = abs((r+l)/2 - m);
-					if (diff < minDist) {
-						minDist = diff;
-						pivot = m;
-					}
-				}
-				m--;
-			}
+                if (s[m] == s[r]) {
+                    big diff = abs((r+l)/2 - m);
+                    if (diff < minDist) {
+                        minDist = diff;
+                        pivot = m;
+                    }
+                }
+                m--;
+            }
 
-			if (pivot == -1) {
-				char prev = s[r];
-				do {
-					r--;
+            if (pivot == -1) {
+                char prev = s[r];
+                do {
+                    r--;
                     //cout << pivot << " | " << prev << " | (" << l << ", " << r << ")\n";
-				} while (s[r] == s[l]);
-			}
+                } while (s[r] == s[l]);
+            }
             //cout << pivot << " | (" << l << ", " << r << ")\n";
-		}
+        }
 
         if (pivot < 0) {
             cout << pivot << "\n";
         } else {
-		    cout << (pivot-l)*(r-pivot) << "\n";
+            cout << (pivot-l)*(r-pivot) << "\n";
         }
-	}
+    }
 
-	return 0;
+    return 0;
 }

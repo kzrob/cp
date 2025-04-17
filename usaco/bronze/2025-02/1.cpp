@@ -2,9 +2,9 @@
 using namespace std;
 
 int main() {
-	//fast io
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
+    //fast io
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     
     //input the constraints
     int N, U;
@@ -43,7 +43,7 @@ int main() {
         { hash++; } else { dot++; }
 
         return min(hash, dot);
-	};
+    };
 
     //initial changes
     int changes = 0;

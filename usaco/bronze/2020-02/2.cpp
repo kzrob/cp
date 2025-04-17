@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     //io
     freopen("breedflip.in", "r", stdin);
-	freopen("breedflip.out", "w", stdout);
+    freopen("breedflip.out", "w", stdout);
 
     //input
     int N;
